@@ -2,10 +2,194 @@
 @tailwind components;
 @tailwind utilities;
 
-/* 필요한 글로벌 스타일만 유지 */
+/* 기본 스타일 */
 body {
   margin: 0;
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* 기본 레이아웃 스타일 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 헤더 스타일 */
+.header {
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: #4b5563;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #4f46e5;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+  width: 240px;
+  background-color: white;
+  padding: 1rem;
+  border-right: 1px solid #e5e7eb;
+}
+
+/* 컨텐츠 영역 */
+.main-content {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+/* 프로젝트 단계 스타일 */
+.project-stages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.stage {
+  display: flex;
+  align-items: center;
+}
+
+.stage-number {
+  width: 3rem;
+  height: 3rem;
+  background-color: #4f46e5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  position: relative;
+}
+
+.stage-inactive .stage-number {
+  background-color: #d1d5db;
+}
+
+.stage-info {
+  margin-left: 1rem;
+}
+
+.stage-title {
+  font-weight: 600;
+  color: #111827;
+}
+
+.stage-status {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+.status-active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-waiting {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* 게시판 스타일 */
+.board {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.board-title {
+  font-weight: 500;
+  color: #111827;
+  font-size: 1.125rem;
+}
+
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.board-table th {
+  text-align: left;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  background-color: #f9fafb;
+}
+
+.board-table td {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.board-table tr:hover {
+  background-color: #f9fafb;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+.page-button {
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.page-button.active {
+  color: #111827;
+}
+
+.page-button.inactive {
+  color: #9ca3af;
+}
+
+.page-button:hover {
+  background-color: #f3f4f6;
 }
